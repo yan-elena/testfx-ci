@@ -1,7 +1,6 @@
 plugins {
     java
     application
-    id("com.github.johnrengelman.shadow") version "5.2.0"
     alias(libs.plugins.gitSemVer)
     alias(libs.plugins.javafx)
 }
