@@ -41,15 +41,3 @@ dependencies {
 tasks.getByName<Test>("test") {
     useJUnitPlatform()
 }
-
-tasks.all {
-    when(this) {
-        is JavaForkOptions -> {
-            // should improve memory on a 64bit JVM
-            jvmArgs("-XX:+UseCompressedOops")
-            // should avoid GradleWorkerMain to steal focus
-            jvmArgs("-Djava.awt.headless=false")
-            jvmArgs("-Dapple.awt.UIElement=true")
-        }
-    }
-}
