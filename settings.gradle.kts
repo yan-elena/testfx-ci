@@ -1,2 +1,2 @@
-rootProject.name = "devops-practice"
+rootProject.name = "testfx-ci"
 
