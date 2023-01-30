@@ -2,10 +2,13 @@ name: pipeline
 'on':
   push:
 jobs:
-  Build:
-    runs-on: ubuntu-latest
-    env:
-      TERM: dumb
+  run-tests:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ macos-latest, windows-latest, ubuntu-20.04 ]
+        java: [ adopt@1.11, adopt@1.16 ]
+    runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout reppository code
         uses: actions/checkout@v3
