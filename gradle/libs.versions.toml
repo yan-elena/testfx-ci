@@ -5,7 +5,7 @@ vertxTest = "4.1.5"
 gson = "2.8.8"
 testfx = "4.0.16-alpha"
 awaitility = "3.0.0"
-monocle = "jdk-11+26"
+monocle = "jdk-12.0.1+2"
 
 [libraries]
 vertx-core = {module = "io.vertx:vertx-core", version.ref = "vertx"}
@@ -22,8 +22,7 @@ awaitility = {module = "org.awaitility:awaitility", version.ref = "awaitility"}
 
 [bundles]
 vertx-dependencies = [
-    "vertx-core",
-    "vertx-web",
+    "vertx-core",    "vertx-web",
     "vertx-web-client",
     "vertx-test"
 ]

@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "org.example"
-version = "1.0-SNAPSHOT"
+version = "1.0.0"
 
 repositories {
     mavenCentral()
@@ -36,6 +36,7 @@ dependencies {
     testImplementation(libs.bundles.testfx)
     testImplementation(libs.junit.api)
     testRuntimeOnly(libs.junit.engine)
+    testRuntimeOnly(libs.testfx.monocle)
 }
 
 tasks.getByName<Test>("test") {
