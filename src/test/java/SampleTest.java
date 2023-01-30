@@ -7,6 +7,6 @@ public class SampleTest extends ApplicationTest {
 
     @Test
     public void test() {
-        assertTrue(true);
+        assertTrue(false);
     }
 }
