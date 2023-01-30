@@ -6,15 +6,15 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ macos-latest, ubuntu-latest, ubuntu-20.04 ]
-        java: [ adopt@1.11, adopt@1.17 ]
+        os: [ windows-latest, ubuntu-latest, ubuntu-20.04 ]
+        java: [ 11, 17 ]
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout reppository code
         uses: actions/checkout@v3
       - uses: actions/setup-java@v3
         with:
-          distribution: adopt
+          distribution: adopt-hotspot
           java-version: ${{ matrix.java }}
       - name: Change wrapper permissions
         run: chmod +x ./gradlew
